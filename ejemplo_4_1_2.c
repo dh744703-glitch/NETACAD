@@ -2,16 +2,16 @@
 
 int main(void) {
     char abecedario[26], c;
-    for (c = 'A'; c <= 'Z'; c++) {
-        abecedario[c - 'A'] = c;
+    for (c = 'a'; c <= 'z'; c++) {
+        abecedario['z'-c] = c;
     }
-    for ( c = 'z'; c > 'a'; c--) {
-        printf("%c", abecedario[c - 'A']);
+    for ( int i = 0; i < 26; i++) {
+        printf("%c\n", abecedario[i]);
     }
-    printf("%c", abecedario['g' - 'a']);
-    printf("%c", abecedario['r' - 'a']);
-    printf("%c", abecedario['e' - 'a']);
-    printf("%c", abecedario['t' - 'a']);
-    printf("%c", abecedario['a' - 'a']);
+    printf("%c", abecedario['z'-'g']);
+    printf("%c", abecedario['z'-'r']);
+    printf("%c", abecedario['z' - 'e']);
+    printf("%c", abecedario['z' - 'a']);
+    printf("%c", abecedario['z' - 't']);
     return 0;
 }
