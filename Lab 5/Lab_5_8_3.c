@@ -1,25 +1,17 @@
 #include <stdio.h>
-double power(double, int);
+double getmaxofthree(double paraA, double paraB, double paraC)
+{
+    if(paraA > paraB && paraA > paraC)
+        return paraA;
+    if(paraB > paraA && paraB > paraC)
+        return paraB;
+    return paraC;
+}
 int main(void)
 {
-    double twentyfiveV = power(5.0, 2);
-    double piSquaredV = power(3.14159265, 2);
-    double piCubedV = power(3.14159265, 3);
-    double bigpower = power(1.23, 20);
-    double millionV = power(10, 6);
-    printf("Thirty five: %.4f\n", twentyfiveV);
-    printf("Pi squared: %.4f\n", piSquaredV);
-    printf("Pi cubed: %.4f\n", piCubedV);
-    printf("Not so big number: %.4f\n", bigpower);
-    printf("Million: %.4f\n", millionV);
+    double tenV = getmaxofthree(5, 9, 10);
+    double bigV = getmaxofthree(555.4, 555.3, 556.4);
+    printf("Ten: %.2f\n", tenV);
+    print("Big value: %.2f\n", bigV);
     return 0;
-}
-double power(double base, int exponent)
-{
-    double result = 1;
-    for (int i = 0; i < exponent; i++)
-    {
-        result *= base;
-    }
-    return result;
 }
